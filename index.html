@@ -1,0 +1,591 @@
+<!!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071426">
+<title>Mis XV años | Yaretzi Zoe Lopez Neri</title>
+
+<style>
+:root {
+  --navy: #ffffff;
+  --navy2: #102747;
+  --silver: #dce4ef;
+  --muted: #aebbd0;
+  --white: #111a36;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--navy);
+  color: var(--white);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .22;
+  background-image: radial-gradient(#fff 1px, transparent 1.5px);
+  background-size: 47px 47px;
+}
+
+button, a {
+  font: inherit;
+}
+
+/* PORTADA */
+
+.intro {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 28px 18px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 20%,
+    #25436a 0,
+    #102747 38%,
+    #071426 78%);
+}
+
+.envelope {
+  width: min(440px, 100%);
+  padding: 36px 24px 32px;
+  border: 1px solid #9eacc2;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0 0 45px #9eb6d333;
+  animation: glow 4s ease-in-out infinite;
+}
+
+@keyframes glow {
+  50% {
+    box-shadow: 0 0 65px #b8c9df55;
+  }
+}
+
+.kicker {
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--silver);
+  font: 11px Arial, sans-serif;
+}
+
+.seal {
+  width: 66px;
+  height: 66px;
+  border: 1px solid #e6edf7;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 24px auto;
+  background: linear-gradient(145deg, #f4f6fa, #9ba9bb 55%, #e9edf4);
+  color: #14243a;
+  font-size: 25px;
+  box-shadow: 0 0 22px #dce4ef55;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: clamp(38px, 10vw, 58px);
+  line-height: 1.05;
+  margin: 12px 0;
+  color: white;
+}
+
+.name {
+  font-size: clamp(20px, 5vw, 28px);
+  letter-spacing: .06em;
+  color: var(--silver);
+  margin: 16px 0 26px;
+}
+
+.open-btn {
+  border: 1px solid var(--silver);
+  background: transparent;
+  color: white;
+  padding: 13px 24px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  font: 11px Arial, sans-serif;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.open-btn:hover {
+  background: #dce4ef;
+  color: #071426;
+}
+
+/* CONTENIDO */
+
+main {
+  display: none;
+  max-width: 850px;
+  margin: auto;
+  padding: 0 18px 70px;
+}
+
+main.show {
+  display: block;
+  animation: rise 1s ease;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* FOTO Y PRESENTACIÓN */
+
+.hero {
+  text-align: center;
+  padding: 70px 0 48px;
+}
+
+.photo-wrap {
+  width: min(340px, 82vw);
+  margin: 30px auto 26px;
+  padding: 8px;
+  border: 1px solid #cbd5e3;
+  box-shadow: 0 0 28px #cbd5e333;
+}
+
+.photo-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hero h2 {
+  font-size: clamp(34px, 8vw, 52px);
+  font-weight: 400;
+  margin: 12px 0;
+  color: #f4f6fa;
+}
+
+.hero .date {
+  font: 13px Arial, sans-serif;
+  letter-spacing: .3em;
+  color: var(--silver);
+  text-transform: uppercase;
+}
+
+.intro-text {
+  max-width: 600px;
+  margin: 25px auto;
+  color: #d6deea;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* SECCIONES */
+
+.section {
+  border-top: 1px solid #8091aa66;
+  padding: 42px 0;
+  text-align: center;
+}
+
+.section h3 {
+  font-size: 27px;
+  font-weight: 400;
+  margin: 0 0 22px;
+  color: #e7edf6;
+}
+
+/* CUENTA REGRESIVA */
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.unit {
+  min-width: 72px;
+  padding: 14px 10px;
+  border: 1px solid #aab8cc66;
+  background: #ffffff08;
+}
+
+.unit strong {
+  display: block;
+  font: 30px Arial, sans-serif;
+  color: white;
+}
+
+.unit span {
+  font: 10px Arial, sans-serif;
+  letter-spacing: .15em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+/* EVENTOS */
+
+.event {
+  max-width: 570px;
+  margin: 0 auto 22px;
+  padding: 24px 18px;
+  border: 1px solid #8798b166;
+  background: #ffffff08;
+}
+
+.event .time {
+  font: 12px Arial, sans-serif;
+  letter-spacing: .22em;
+  color: #cbd5e3;
+  text-transform: uppercase;
+}
+
+.event h4 {
+  font-size: 23px;
+  font-weight: 400;
+  margin: 12px 0;
+}
+
+.event p {
+  font: 14px/1.7 Arial, sans-serif;
+  color: #c4cede;
+  margin: 6px 0 17px;
+}
+
+.map-link, .rsvp {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #dce4ef;
+  color: #f8f9fc;
+  padding: 12px 18px;
+  font: 11px Arial, sans-serif;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  transition: .2s;
+}
+
+.map-link:hover, .rsvp:hover {
+  background: #dce4ef;
+  color: #071426;
+}
+
+.rsvp {
+  background: #dce4ef;
+  color: #071426;
+  padding: 15px 24px;
+}
+
+/* PIE */
+
+.footer {
+  text-align: center;
+  padding: 42px 0 15px;
+  color: #aebbd0;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.small {
+  font: 10px Arial, sans-serif;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #aebbd0;
+}
+
+@media (min-width: 700px) {
+  .hero {
+    padding-top: 85px;
+  }
+
+  .photo-wrap img {
+    max-height: 560px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PORTADA -->
+
+<section class="intro" id="portada">
+
+  <div class="envelope">
+
+    <div class="kicker">
+      Una celebración especial
+    </div>
+
+    <div class="seal">✦</div>
+
+    <div class="small">
+      Estás cordialmente invitado(a)
+    </div>
+
+    <h1>Mis XV años</h1>
+
+    <div class="name">
+      Yaretzi Zoe Lopez Neri
+    </div>
+
+    <button class="open-btn" onclick="abrirInvitacion()">
+      Abrir invitación
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- INVITACIÓN -->
+
+<main id="contenido">
+
+  <header class="hero">
+
+    <div class="date">
+      20 · Enero · 2027
+    </div>
+
+    <div class="photo-wrap">
+      <img
+        src="assets/yaretzi.jpg"
+        alt="Retrato de Yaretzi"
+      >
+    </div>
+
+    <div class="small">
+      Con la alegría de compartir este momento
+    </div>
+
+    <h2>
+      Yaretzi Zoe<br>
+      Lopez Neri
+    </h2>
+
+    <p class="intro-text">
+      Hay momentos que se vuelven inolvidables
+      cuando los compartimos con las personas
+      que queremos. Me encantará que me acompañes
+      a celebrar esta noche tan especial.
+    </p>
+
+  </header>
+
+
+  <!-- CUENTA REGRESIVA -->
+
+  <section class="section">
+
+    <h3>La cuenta regresiva</h3>
+
+    <div class="countdown" aria-live="polite">
+
+      <div class="unit">
+        <strong id="days">00</strong>
+        <span>Días</span>
+      </div>
+
+      <div class="unit">
+        <strong id="hours">00</strong>
+        <span>Horas</span>
+      </div>
+
+      <div class="unit">
+        <strong id="minutes">00</strong>
+        <span>Minutos</span>
+      </div>
+
+      <div class="unit">
+        <strong id="seconds">00</strong>
+        <span>Segundos</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- DETALLES DEL EVENTO -->
+
+  <section class="section">
+
+    <h3>Detalles del evento</h3>
+
+    <article class="event">
+
+      <div class="time">
+        4:00 p. m.
+      </div>
+
+      <h4>Ceremonia religiosa</h4>
+
+      <p>20 de enero de 2027</p>
+
+      <a
+        class="map-link"
+        href="https://maps.app.goo.gl/fEYZZUDRjHrC72259?g_st=aw"
+        target="_blank"
+        rel="noopener"
+      >
+        Ver ubicación en Maps
+      </a>
+
+    </article>
+
+
+    <article class="event">
+
+      <div class="time">
+        6:00 p. m.
+      </div>
+
+      <h4>Recepción</h4>
+
+      <p>20 de enero de 2027</p>
+
+      <a
+        class="map-link"
+        href="https://maps.app.goo.gl/iiwigcAqL5ARRSJv8"
+        target="_blank"
+        rel="noopener"
+      >
+        Ver salón en Maps
+      </a>
+
+    </article>
+
+  </section>
+
+
+  <!-- CONFIRMACIÓN -->
+
+  <section class="section">
+
+    <h3>Confirma tu asistencia</h3>
+
+    <p class="intro-text">
+      Será un honor contar con tu presencia.
+      Por favor confirma tu asistencia por WhatsApp.
+    </p>
+
+    <a
+      class="rsvp"
+      href="https://wa.me/527713180590?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20los%20XV%20a%C3%B1os%20de%20Yaretzi%20Zoe."
+      target="_blank"
+      rel="noopener"
+    >
+      Confirmar por WhatsApp
+    </a>
+
+  </section>
+
+
+  <!-- PIE DE INVITACIÓN -->
+
+  <footer class="footer">
+
+    <div class="seal">✦</div>
+
+    <div>
+      ¡Espero celebrar contigo!
+    </div>
+
+    <div class="small">
+      Yaretzi Zoe · Mis XV años
+    </div>
+
+  </footer>
+
+</main>
+
+
+<script>
+
+// ABRIR INVITACIÓN
+
+function abrirInvitacion() {
+
+  document.getElementById("portada").style.display = "none";
+
+  const main = document.getElementById("contenido");
+
+  main.classList.add("show");
+  main.style.display = "block";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+}
+
+
+// CUENTA REGRESIVA
+
+const target = new Date(
+  "2027-01-20T16:00:00-06:00"
+).getTime();
+
+
+function tick() {
+
+  const diff = Math.max(0, target - Date.now());
+
+  const vals = {
+
+    days: Math.floor(diff / 86400000),
+
+    hours: Math.floor(
+      diff % 86400000 / 3600000
+    ),
+
+    minutes: Math.floor(
+      diff % 3600000 / 60000
+    ),
+
+    seconds: Math.floor(
+      diff % 60000 / 1000
+    )
+
+  };
+
+
+  Object.keys(vals).forEach(key => {
+
+    document.getElementById(key).textContent =
+      String(vals[key]).padStart(2, "0");
+
+  });
+
+}
+
+
+tick();
+
+setInterval(tick, 1000);
+
+</script>
+
+</body>
+</html>
