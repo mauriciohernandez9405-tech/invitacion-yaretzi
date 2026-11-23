@@ -255,41 +255,71 @@
         </section>
 
         <!-- 4. CALENDARIO -->
-        <section class="px-6 py-8 text-center">
-            <h3 class="font-serif text-xl tracking-widest text-white uppercase mb-4">ABRIL</h3>
+<section class="px-6 py-8 text-center bg-[#0B152B]">
 
-            <div class="max-w-xs mx-auto bg-navy p-4 rounded-xl border border-navy-100 shadow-sm">
-                <!-- Días de la semana -->
-                <div class="grid grid-cols-7 gap-1 text-xs font-sans font-semibold text-slate-400 mb-3 border-b border-slate-100 pb-2">
-                    <span>D</span><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span>
-                </div>
-                <!-- Grilla de fechas de Abril 2027 -->
-                <div class="grid grid-cols-7 gap-1 text-sm font-sans text-slate-600">
-                    <!-- Días vacíos previos -->
-                    <span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
-                    <span>7</span><span>8</span><span>9</span>
-                    <!-- Día 10 Marcado con Corazón -->
-                    <div class="relative flex items-center justify-center">
-                        <span class="w-8 h-8 rounded-full bg-navy text-white flex items-center justify-center font-bold text-xs shadow-md z-10">10</span>
-                        <span class="absolute -top-1 -right-1 text-slate-400 text-xs">♥</span>
-                    </div>
-                    <span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
-                    <span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span>
-                    <span>28</span><span>29</span><span>30</span>
-                </div>
+    <!-- Título del mes -->
+    <h3 class="font-serif text-xl tracking-widest text-white uppercase mb-4">
+        ABRIL
+    </h3>
+
+    <!-- Contenedor del calendario -->
+    <div class="max-w-xs mx-auto bg-[#0B152B] p-4 rounded-xl border border-[#C0C0C0]/40 shadow-lg">
+
+        <!-- Días de la semana -->
+        <div class="grid grid-cols-7 gap-1 text-xs font-sans font-semibold text-[#C0C0C0] mb-3 border-b border-[#C0C0C0]/30 pb-2">
+            <span>D</span><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span>
+        </div>
+
+        <!-- Grilla de fechas de Abril 2027 -->
+        <div class="grid grid-cols-7 gap-1 text-sm font-sans text-white">
+
+            <!-- Días vacíos previos -->
+            <span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+
+            <span>7</span><span>8</span><span>9</span>
+
+            <!-- Día 10 marcado con corazón plateado -->
+            <div class="relative flex items-center justify-center">
+                <span class="w-8 h-8 rounded-full bg-[#C0C0C0] text-[#0B152B] flex items-center justify-center font-bold text-xs shadow-md z-10">
+                    10
+                </span>
+                <span class="absolute -top-1 -right-1 text-[#E5E7EB] text-xs z-20">
+                    ♥
+                </span>
             </div>
 
-            <!-- SOBRE DE INVITACIÓN / MENSAJE -->
-            <div class="mt-10 max-w-xs mx-auto">
-                <div class="bg-slate-100/90 border border-slate-300/60 rounded-xl p-5 shadow-inner relative">
-                    <div class="bg-Navy p-4 rounded-lg shadow-sm border border-slate-200/80">
-                        <p class="font-cursive text-2xl leading-relaxed text-navy">
-                            Me haría mucha ilusión que me acompañes a celebrar mis XV años. Es un momento especial para mí y me encantaría compartirlo con las personas que más quiero. Tu presencia es mi mayor regalo pero si deseas contribuir con un detalle especial, UNICAMENTE una lluvia de sobres sera muy bien recibida con cariño y gratitud.
-                        </p>
-                    </div>
-                </div>
+            <span>11</span><span>12</span><span>13</span><span>14</span>
+            <span>15</span><span>16</span><span>17</span><span>18</span>
+            <span>19</span><span>20</span><span>21</span><span>22</span>
+            <span>23</span><span>24</span><span>25</span><span>26</span>
+            <span>27</span><span>28</span><span>29</span><span>30</span>
+
+        </div>
+    </div>
+
+    <!-- SOBRE DE INVITACIÓN / MENSAJE -->
+    <div class="mt-10 max-w-xs mx-auto">
+
+        <!-- Exterior del sobre -->
+        <div class="bg-[#0B152B] border border-[#C0C0C0]/50 rounded-xl p-5 shadow-lg relative">
+
+            <!-- Interior del sobre -->
+            <div class="bg-[#0B152B] p-4 rounded-lg shadow-inner border border-[#C0C0C0]/40">
+
+                <!-- Mensaje -->
+                <p class="font-cursive text-2xl leading-relaxed text-white">
+                    Me haría mucha ilusión que me acompañes a celebrar mis XV años.
+                    Es un momento especial para mí y me encantaría compartirlo
+                    con las personas que más quiero. Tu presencia es mi mayor regalo,
+                    pero si deseas contribuir con un detalle especial, ÚNICAMENTE
+                    una lluvia de sobres será muy bien recibida con cariño y gratitud.
+                </p>
+
             </div>
-        </section>
+        </div>
+    </div>
+
+</section>
 
         <!-- 5. CONTADOR REGRESIVO Y GALERÍA DE FOTOS -->
         <section class="px-6 py-8 text-center bg-slate-50/50">
